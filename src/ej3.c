@@ -1,3 +1,27 @@
-//
-// Created by ruben on 22/02/2026.
-//
+#ifndef STATS_H
+#define STATS_H
+#include <stddef.h>
+int max_int(const int *v, size_t n);
+int min_int(const int *v, size_t n);
+double media_int(const int *v, size_t n);
+/* Normaliza en el propio vector:
+v[i] = (v[i] - media) / desviacion
+Si n==0 o desviacion==0, no hace nada.
+*/
+void normaliza(double *v, size_t n);
+#endif
+
+#include "stats.h"
+#include <math.h>
+int max_int(const int *v, size_t n) {
+    // TODO
+}
+int min_int(const int *v, size_t n) {
+    // TODO
+}
+double media_int(const int *v, size_t n) {
+    // TODO
+}
+void normaliza(double *v, size_t n) {
+    // TODO
+}
