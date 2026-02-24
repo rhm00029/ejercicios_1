@@ -1,27 +1,16 @@
-#ifndef STATS_H
-#define STATS_H
-#include <stddef.h>
-int max_int(const int *v, size_t n);
-int min_int(const int *v, size_t n);
-double media_int(const int *v, size_t n);
-/* Normaliza en el propio vector:
-v[i] = (v[i] - media) / desviacion
-Si n==0 o desviacion==0, no hace nada.
-*/
-void normaliza(double *v, size_t n);
-#endif
-
+#include <stdio.h>
 #include "stats.h"
-#include <math.h>
-int max_int(const int *v, size_t n) {
-    // TODO
-}
-int min_int(const int *v, size_t n) {
-    // TODO
-}
-double media_int(const int *v, size_t n) {
-    // TODO
-}
-void normaliza(double *v, size_t n) {
-    // TODO
+int main(void) {
+    int a[] = {3, -1, 8, 8, 2};
+    size_t n = sizeof(a)/sizeof(a[0]);
+    printf("max=%d\n", max_int(a, n));
+    printf("min=%d\n", min_int(a, n));
+    printf("media=%.2f\n", media_int(a, n));
+    double b[] = {1.0, 2.0, 3.0, 4.0};
+    size_t m = sizeof(b)/sizeof(b[0]);
+    normaliza(b, m);
+    printf("normalizado: ");
+    for (size_t i = 0; i < m; ++i) printf("%.3f ", b[i]);
+    printf("\n");
+    return 0;
 }
