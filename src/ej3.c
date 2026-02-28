@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "stats.h"
 int main(void) {
-    int a[] = {3, -1, 8, 8, 2};
+    int a[] = {13, -4, 76, 44, -53};
     size_t n = sizeof(a)/sizeof(a[0]);
     printf("max=%d\n", max_int(a, n));
     printf("min=%d\n", min_int(a, n));
     printf("media=%.2f\n", media_int(a, n));
-    double b[] = {1.0, 2.0, 3.0, 4.0};
+    double b[] = {-99, -2, -1, 7, 10, 15, 22};
     size_t m = sizeof(b)/sizeof(b[0]);
     normaliza(b, m);
     printf("normalizado: ");
